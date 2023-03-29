@@ -8,10 +8,10 @@
 # 就職Termの技術
 * AWS EC2
 * devise
+* cancancan
 <br>
 
 # カリキュラム外の技術
-* cancancan
 * line-bot-api
 * gem chartkick
 <br>
