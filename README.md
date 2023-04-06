@@ -40,7 +40,7 @@ https://docs.google.com/spreadsheets/d/1xnWG0MWhm2Vl4R2LohBOAwwNg9ZrBhEEWcOh-ATd
 <br>
 
 # ER図
-![ER](readme/original_app_ER.drawio.png)
+![ER](readme/original_app-ER.drawio.png)
 <br>
 
 # ワイヤーフレーム
