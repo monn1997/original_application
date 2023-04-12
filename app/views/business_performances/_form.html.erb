@@ -1,0 +1,36 @@
+<%= form_with(model: @business_performance, local: true ) do |form| %>
+  <% if @business_performance.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= @business_performance.errors.count %>件のエラーがあります。</h2>
+      <ul>
+
+      <% @business_performance.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="business_performance_title">
+    <%= form.label :number_of_nominations %>
+    <%= form.number_field :number_of_nominations %>
+  </div>
+  <div class="business_performance_title">
+    <%= form.label :on_site_nomination %>
+    <%= form.number_field :on_site_nomination %>
+  </div>
+  <div class="business_performance_title">
+    <%= form.label :sales_subtotal %>
+    <%= form.number_field :sales_subtotal %>
+  </div>
+  <div class="business_performance_title">
+    <%= form.label :duty_hours %>
+    <%= form.number_field :duty_hours, step: "0.1" %>
+  </div>
+
+  <br>
+
+  <%= form.submit "送信" %>
+<% end %>
+
+  <%= link_to "一覧画面にもどる", business_performances_path %>

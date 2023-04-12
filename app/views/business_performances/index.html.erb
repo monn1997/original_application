@@ -1,0 +1,28 @@
+<h1>営業成績一覧</h1>
+
+<p><%= notice %></p>
+
+<table>
+  <tr>
+    <th>指名本数</th>
+    <th>場内指名本数</th>
+    <th>売上小計</th>
+    <th>勤務時間</th>
+  </tr>
+  
+<% @business_performances.each do |business_performance| %>
+  <tr>
+    <td><%= business_performance.number_of_nominations %>本</td>
+    <td><%= business_performance.on_site_nomination %>本</td>
+    <td><%= business_performance.sales_subtotal %>円</td>
+    <td><%= business_performance.duty_hours %>時間</td>
+
+     <td><%= link_to '詳細を確認する', business_performance_path(business_performance.id) %></td>
+    <td><%= link_to "編集する", edit_business_performance_path(business_performance.id), data: { confirm: '本当に編集していいですか？' } %></td>
+    <td><%= link_to '削除する', business_performance_path(business_performance.id), method: :delete ,data: { confirm: '本当に削除していいですか？' } %></td>
+  </tr>
+<% end %>
+</table>    
+
+<br>
+<%= link_to '新しく投稿する', new_business_performance_path %>
