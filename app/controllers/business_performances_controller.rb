@@ -1,6 +1,6 @@
 class BusinessPerformancesController < ApplicationController
   before_action :set_business_performance, only: [:show, :edit, :update, :destroy]
-
+#
   def index
     @business_performances = BusinessPerformance.all
   end
