@@ -1,0 +1,8 @@
+<h1>詳細画面</h1>
+<p>指名本数: <%= @business_performance.number_of_nominations %>本</p>
+<p>場内指名本数: <%= @business_performance.on_site_nomination %>本</p>
+<p>売上小計: <%= @business_performance.sales_subtotal %>円</p>
+<p>勤務時間: <%= @business_performance.duty_hours %>時間</p>
+
+<br>
+<%= link_to "一覧画面にもどる", business_performances_path %>
