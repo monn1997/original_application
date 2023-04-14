@@ -1,4 +1,9 @@
 Rails.application.routes.draw do
-  #root 'business_performances#index'
+  devise_for :users
   resources :business_performances 
+  root 'business_performances#index'
+
+  if Rails.env.development?
+    mount LetterOpenerWeb::Engine, at: "/letter_opener"
+  end  
 end
