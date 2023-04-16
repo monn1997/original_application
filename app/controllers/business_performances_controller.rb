@@ -1,13 +1,18 @@
 class BusinessPerformancesController < ApplicationController
   before_action :set_business_performance, only: [:show, :edit, :update, :destroy]
-
+#
   def index
     @business_performances = BusinessPerformance.all
   end
   
   def new
-    @business_performance = BusinessPerformance.new
-  end  
+    if current_user != @user
+      unless current_user.admin?
+        redirect_to business_performances_path 
+      end
+    end
+    @business_performance = Business_performance.new
+  end
 
   def create
     @business_performance = BusinessPerformance.new(business_performance_params)

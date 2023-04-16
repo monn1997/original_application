@@ -18,6 +18,12 @@ gem 'turbolinks', '~> 5'
 # Build JSON APIs with ease. Read more: https://github.com/rails/jbuilder
 gem 'jbuilder', '~> 2.7'
 
+gem 'devise'
+gem 'devise-i18n'
+gem 'rexml'
+gem 'rails_admin', '~> 3.0'
+gem 'cancancan'
+
 gem 'pry-rails'
 gem 'better_errors'
 gem 'binding_of_caller'
@@ -44,6 +50,8 @@ group :development do
   # Can be configured to work on production as well see: https://github.com/MiniProfiler/rack-mini-profiler/blob/master/README.md
   gem 'rack-mini-profiler', '~> 2.0'
   gem 'listen', '~> 3.3'
+
+  gem 'letter_opener_web'
   # Spring speeds up development by keeping your application running in the background. Read more: https://github.com/rails/spring
   gem 'spring'
 end
