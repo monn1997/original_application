@@ -21,6 +21,8 @@ gem 'jbuilder', '~> 2.7'
 gem 'devise'
 gem 'devise-i18n'
 gem 'rexml'
+gem 'rails_admin', '~> 3.0'
+gem 'cancancan'
 
 gem 'pry-rails'
 gem 'better_errors'
